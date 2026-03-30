@@ -2,96 +2,247 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Devil Fish Robotics</title>
+<title>Devil Fish Robotics ASU</title>
+
 <style>
-  body { font-family: Arial; margin: 0; background: #ffffff; color: #001f4d; }
-  header { background: #001f4d; color: white; padding: 1rem; text-align: center; }
-  nav a { margin: 0 1rem; color: #ffd700; text-decoration: none; font-weight: bold; }
-  nav a:hover { color: #ff0000; }
-  section { padding: 2rem; max-width: 1000px; margin: auto; }
-  h1, h2 { text-align: center; }
-  .card { background: #001f4d; color: white; padding: 1rem; margin: 1rem; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-  .projects, .sponsors { display: flex; flex-wrap: wrap; justify-content: center; }
-  .projects .card, .sponsors .card { width: 250px; margin: 1rem; text-align: center; }
-  .projects img, .sponsors img { width: 100%; border-radius: 5px; }
-  a.button { background: #ffd700; color: #001f4d; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 0.5rem; }
-  a.button:hover { background: #ff0000; color: white; }
-  footer { background: #001f4d; text-align: center; padding: 1rem; margin-top: 2rem; color: #ffd700; font-weight: bold; }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: oswald, garet;
+  background: white;
+  color: #001f4d;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0,0,50,0.7), rgba(0,0,50,0.7)), url('https://via.placeholder.com/1500x800');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.button {
+  background: #ffd700;
+  color: #001f4d;
+  padding: 12px 22px;
+  margin: 8px;
+  display: inline-block;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: red;
+  color: white;
+}
+
+/* NAV */
+nav {
+  background: #001f4d;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: #ffd700;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+  padding: 70px 20px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* PROJECT CARDS */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #001f4d;
+  color: white;
+  width: 280px;
+  margin: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  margin: 10px;
+}
+
+.card p {
+  padding: 0 10px 15px;
+}
+
+/* VIDEO */
+.video iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+/* SPONSORS */
+.sponsors img {
+  width: 140px;
+  margin: 15px;
+  transition: 0.3s;
+}
+
+.sponsors img:hover {
+  transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+  background: #001f4d;
+  color: #ffd700;
+  padding: 20px;
+  text-align: center;
+}
 </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Devil Fish Robotics</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#documentation">Documentation</a>
-    <a href="#sponsors">Sponsors</a>
-    <a href="#donate">Donate</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<!-- HERO -->
+<div class="hero">
+  <h1>ASU Underwater Robotics Club</h1>
+  <p>Designing and building autonomous underwater robots</p>
+  <a href="#projects" class="button">View Projects</a>
+  <a href="#donate" class="button">Support Us</a>
+</div>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>We design and build autonomous underwater robots for competitions and research. Our mission is to foster hands-on learning, innovation, and ocean exploration at ASU.</p>
+<!-- NAV -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#video">Demo</a>
+  <a href="#sponsors">Sponsors</a>
+  <a href="#donate">Donate</a>
+</nav>
+
+<!-- ABOUT -->
+<section id="about" class="fade">
+  <h2>What We Do</h2>
+  <p>We are a student-led engineering team building underwater robots for competitions, research, and real-world challenges.</p>
 </section>
 
-<section id="projects">
-  <h2>Our Projects</h2>
+<!-- PROJECTS -->
+<section id="projects" class="fade">
+  <h2>Our Work</h2>
   <div class="projects">
+
     <div class="card">
-      <img src="project1.jpg" alt="Project 1">
+      <img src="https://via.placeholder.com/300x200">
       <h3>ROV Alpha</h3>
-      <p>Autonomous underwater vehicle built for the 2025 regional competition.</p>
+      <p>Competition-ready underwater robot.</p>
     </div>
+
     <div class="card">
-      <img src="project2.jpg" alt="Project 2">
+      <img src="https://via.placeholder.com/300x200">
       <h3>Submarine Beta</h3>
-      <p>Prototype designed for underwater object retrieval and mapping.</p>
+      <p>Autonomous navigation prototype.</p>
     </div>
-    <div class="card">
-      <img src="project3.jpg" alt="Project 3">
-      <h3>ROV Gamma</h3>
-      <p>Advanced model with improved sensors and navigation system.</p>
-    </div>
+
   </div>
 </section>
 
-<section id="documentation">
-  <h2>Documentation</h2>
-  <p>Technical guides, schematics, and tutorials can be found <a href="#" class="button">here</a>.</p>
+<!-- VIDEO -->
+<section id="video" class="fade">
+  <h2>See Our Robot in Action</h2>
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+  </div>
 </section>
 
-<section id="sponsors">
+<!-- SPONSORS -->
+<section id="sponsors" class="fade">
   <h2>Our Sponsors</h2>
   <div class="sponsors">
-    <div class="card"><img src="sponsor1.png" alt="Sponsor 1"></div>
-    <div class="card"><img src="sponsor2.png" alt="Sponsor 2"></div>
-    <div class="card"><img src="sponsor3.png" alt="Sponsor 3"></div>
-    <div class="card"><img src="sponsor4.png" alt="Sponsor 4"></div>
+    <img src="https://via.placeholder.com/150">
+    <img src="https://via.placeholder.com/150">
+    <img src="https://via.placeholder.com/150">
   </div>
-  <p style="text-align:center; margin-top:1rem;">Want your logo here? Become a sponsor today!</p>
+  <p>Partner with us and showcase your brand here.</p>
 </section>
 
-<section id="donate">
-  <h2>Support Us</h2>
-  <p>Your donations help us build and improve our robots. Every contribution goes directly to materials, travel, and competition costs.</p>
-  <div style="text-align:center;">
-    <a href="#" class="button">Donate Now</a>
-  </div>
+<!-- DONATE -->
+<section id="donate" class="fade">
+  <h2>Support Our Team</h2>
+  <p>Your support helps fund materials, competitions, and innovation.</p>
+  <a href="#" class="button">Donate Now</a>
 </section>
 
-<section id="contact">
-  <h2>Contact & Team</h2>
-  <p>Email: underwaterrobotics@asu.edu</p>
-  <p>Join us at our weekly meetings on campus!</p>
-</section>
-
+<!-- FOOTER -->
 <footer>
   © 2026 ASU Underwater Robotics Club
 </footer>
+
+<!-- JS for animation -->
+<script>
+const elements = document.querySelectorAll('.fade');
+
+function showOnScroll() {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', showOnScroll);
+showOnScroll();
+</script>
 
 </body>
 </html>
