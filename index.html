@@ -94,7 +94,7 @@ section {
 }
 
 /* PROJECT CARDS */
-.projects {
+.projects, .donate-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -148,6 +148,11 @@ footer {
   margin-left: 10px;
   vertical-align: middle;
 }
+
+.footer-icons img:hover {
+  transform: scale(1.2);
+  transition: 0.2s;
+}
 </style>
 </head>
 
@@ -155,7 +160,7 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <div class="DFR logo">
+  <div class="logo">
     <img src="DFR logo.webp" alt="Club Logo">
     <strong style="color:white;">Devil Fish Robotics</strong>
   </div>
@@ -165,6 +170,7 @@ footer {
     <a href="#projects">Projects</a>
     <a href="#video">Demo</a>
     <a href="#sponsors">Sponsors</a>
+    <a href="#donate">Donate</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -175,6 +181,7 @@ footer {
   <p>Designing and building autonomous underwater robots</p>
   <a href="#projects" class="button">View Projects</a>
   <a href="#contact" class="button">Contact Us</a>
+  <a href="#donate" class="button">Donate</a>
 </div>
 
 <!-- ABOUT -->
@@ -218,17 +225,52 @@ footer {
   </div>
 </section>
 
+<!-- DONATE -->
+<section id="donate" class="fade">
+  <h2>Support Devil Fish Robotics</h2>
+  
+  <p>
+    Your support helps us design, build, and compete with advanced underwater robots.
+  </p>
+
+  <div class="donate-cards">
+    <div class="card">
+      <h3>Materials</h3>
+      <p>Funding electronics, components, and manufacturing.</p>
+    </div>
+
+    <div class="card">
+      <h3>Competitions</h3>
+      <p>Travel, registration, and competition costs.</p>
+    </div>
+
+    <div class="card">
+      <h3>Innovation</h3>
+      <p>Developing new designs and improving our robots.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:30px;">
+    <a href="https://linktr.ee/devilfishROV" target="_blank" class="button">
+      Donate via Linktree
+    </a>
+  </div>
+
+  <p style="margin-top:20px;">
+    Interested in sponsoring us? Reach out to have your logo featured on our website.
+  </p>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="fade">
   <h2>Contact Us</h2>
-  <p>Email: devilfishrov@gmail.com</p>
+  <p>Email: underwaterrobotics@asu.edu</p>
   <p>Follow us on social media or reach out to collaborate!</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
   © 2026 ASU Underwater Robotics Club
-  
   <span class="footer-icons">
     <a href="https://www.instagram.com/devilfishrov/?hl=en" target="_blank">
       <img src="instagram logo.webp" alt="Instagram">
