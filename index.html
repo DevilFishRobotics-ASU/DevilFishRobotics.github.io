@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Devil Fish Robotics ASU</title>
+<title>Devil Fish Robotics</title>
 
 <style>
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: oswald, garet;
+  font-family: Arial, sans-serif;
   background: white;
   color: #001f4d;
 }
@@ -26,14 +24,7 @@ body {
   padding: 120px 20px;
 }
 
-.hero h1 {
-  font-size: 3em;
-}
-
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
+.hero h1 { font-size: 3em; }
 
 /* BUTTONS */
 .button {
@@ -53,16 +44,29 @@ body {
   color: white;
 }
 
-/* NAV */
+/* NAVBAR */
 nav {
   background: #001f4d;
   padding: 1rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
 }
 
-nav a {
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav-links a {
   color: #ffd700;
   margin: 0 15px;
   text-decoration: none;
@@ -110,17 +114,7 @@ section {
   transform: translateY(-10px) scale(1.03);
 }
 
-.card img {
-  width: 100%;
-}
-
-.card h3 {
-  margin: 10px;
-}
-
-.card p {
-  padding: 0 10px 15px;
-}
+.card img { width: 100%; }
 
 /* VIDEO */
 .video iframe {
@@ -148,27 +142,40 @@ footer {
   padding: 20px;
   text-align: center;
 }
+
+.footer-icons img {
+  width: 25px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <h1>Devil Fish Robotics at ASU</h1>
-  <p>Designing and building autonomous underwater robots</p>
-  <a href="#projects" class="button">View Projects</a>
-  <a href="#donate" class="button">Support Us</a>
-</div>
-
 <!-- NAV -->
 <nav>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#video">Demo</a>
-  <a href="#sponsors">Sponsors</a>
-  <a href="#donate">Donate</a>
+  <div class="logo">
+    <img src="logo.png" alt="Club Logo">
+    <strong style="color:white;">Devil Fish Robotics</strong>
+  </div>
+
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#video">Demo</a>
+    <a href="#sponsors">Sponsors</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Devil Fish Robotics</h1>
+  <p>Designing and building autonomous underwater robots</p>
+  <a href="#projects" class="button">View Projects</a>
+  <a href="#contact" class="button">Contact Us</a>
+</div>
 
 <!-- ABOUT -->
 <section id="about" class="fade">
@@ -180,7 +187,6 @@ footer {
 <section id="projects" class="fade">
   <h2>Our Work</h2>
   <div class="projects">
-
     <div class="card">
       <img src="https://via.placeholder.com/300x200">
       <h3>ROV Alpha</h3>
@@ -192,7 +198,6 @@ footer {
       <h3>Submarine Beta</h3>
       <p>Autonomous navigation prototype.</p>
     </div>
-
   </div>
 </section>
 
@@ -210,24 +215,31 @@ footer {
   <div class="sponsors">
     <img src="https://via.placeholder.com/150">
     <img src="https://via.placeholder.com/150">
-    <img src="https://via.placeholder.com/150">
   </div>
-  <p>Partner with us and showcase your brand here.</p>
 </section>
 
-<!-- DONATE -->
-<section id="donate" class="fade">
-  <h2>Support Our Team</h2>
-  <p>Your support helps fund materials, competitions, and innovation.</p>
-  <a href="#" class="button">Donate Now</a>
+<!-- CONTACT -->
+<section id="contact" class="fade">
+  <h2>Contact Us</h2>
+  <p>Email: underwaterrobotics@asu.edu</p>
+  <p>Follow us on social media or reach out to collaborate!</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
   © 2026 ASU Underwater Robotics Club
+  
+  <span class="footer-icons">
+    <a href="https://www.instagram.com/devilfishrov/?hl=en" target="_blank">
+      <img src="instagram.png" alt="Instagram">
+    </a>
+    <a href="https://linktr.ee/devilfishROV" target="_blank">
+      <img src="linktree.png" alt="Linktree">
+    </a>
+  </span>
 </footer>
 
-<!-- JS for animation -->
+<!-- JS ANIMATION -->
 <script>
 const elements = document.querySelectorAll('.fade');
 
